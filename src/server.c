@@ -1,10 +1,12 @@
 #include "common.h"
-#include "server.h"
+
+int create_server_socket(void);
+void run_server(int sockfd);
+void *handle_client(void *arg);
 
 
 int main (int argc, char **agrv[]) {
 
-    int SOCKET_CONNECT()
 
     return 0;
 }
