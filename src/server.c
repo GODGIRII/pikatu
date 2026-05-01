@@ -5,15 +5,25 @@
 */
 
 #include "common.h"
+<<<<<<< HEAD
+=======
+
+int create_server_socket(void);
+void run_server(int sockfd);
+void *handle_client(void *arg);
+>>>>>>> main
 
 static volatile int running = 1;
 
 // Signal handler set to 0
 
+<<<<<<< HEAD
 static void handle_sigint(int sig) {
     (void)sig;
     running = 0;
 }
+=======
+>>>>>>> main
 
 int create_server_socket(void) {
     struct addrinfo hints, *res;
