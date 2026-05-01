@@ -1,13 +1,19 @@
+/*
+     * Server.c - Configure and run a TCP echo server
+     * Port : 4200
+     * IP   : 192.168.0.129
+*/
+
 #include "common.h"
 
-/* Ctrl + c */
 static volatile int running = 1;
+
+// Signal handler set to 0
 
 static void handle_sigint(int sig) {
     (void)sig;
     running = 0;
 }
-/* Socket entry point */
 
 int create_server_socket(void) {
     struct addrinfo hints, *res;
